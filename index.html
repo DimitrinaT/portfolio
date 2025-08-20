@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Dimitrina</title>
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="stylesheet/portfolio.css">
+</head>
+
+<!--Body-->
+<body class="Background">
+
+    <!--Navbar-->
+    <div class="navbar">
+        <a class="active" href="#Home">Home</a>
+        <a href="#About">About</a>
+        <a href="#GitHub">GitHub</a>
+        <a href="#Contact">Contact</a>
+    </div>
+
+    <!--Breaks inserted to add space between navbar and the first heading-->
+    <br>
+    <br>
+
+    <!--Background video-->
+    <div id="Home">
+        <video autoplay muted loop id="Typing_Video">
+            <source src="images/video/laptop.mp4" type="video/mp4">
+            <!--Display message if video fails to run-->
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <!--Video text-->
+    <div class="Video_Text">
+        <h1 class="white-text">Dimitrina Tancheva</h1>
+        <strong>
+            <p class="center">
+               Stay calm, keep your mind clear, and let the code take shape — one elegant solution at a time.
+               <br>
+               <br> Hello, I am Dimitrina, and welcome to my portfolio. Here, you will find the skills I am learning and the projects I am experimenting with as I grow in my coding journey.
+               <br> 
+               <br>Thank you for stopping by — I am excited to share my work with you!
+            </p>
+        </strong>
+    </div>
+
+    <!--About section-->
+    <div class="Row" id="About">
+        <!--Left colum-->
+        <div class="Column_2">
+            <img src="images/html_custom.png" alt="">
+        </div>
+        <!--Right column-->
+        <div class="Column_1">
+            <h1>About</h1>
+            <p>
+                I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, where I trained in web development languages such as HTML, CSS and JavaScript.
+                <br>
+                <br> I enjoy exploring both front-end and back-end development and experimenting with new challenges in coding. 
+                <br>
+                <br>I am excited to continue learning and growing, and I would love to connect or collaborate — feel free to reach out using the contact information below!
+            </p>
+        </div>
+    </div>
+
+    <!--GitHub section-->
+    <div class="Row" id="GitHub">
+        <!--Left column-->
+        <div class="Column_1">
+            <h1>GitHub</h1>
+            <p>
+                See the projects I have been working on by visiting my GitHub here:
+                <br>
+                <p class="center"><a href="https://github.com/DimitrinaT" target="_blank">Dimitrina Tancheva GitHub</a></p>
+            </p>
+        </div>
+        <!--Right column-->
+        <div class="Column_2">
+            <a href="https://github.com/DimitrinaT" target="_blank">
+                <img src="images/github-1.png" alt="GitHub Logo">
+            </a>
+        </div>
+    </div>
+
+    <!--Contact section-->
+    <div class="Row" id="Contact">
+        <!--Contact image left column-->
+        <div class="Column_2 Column tall">
+            <img src="images/html_custom.png" alt="">
+        </div>
+        <!--Contact from right column-->
+        <div class="Column_1 Column_tall">
+            <h1>Contact</h1>
+            <!--The form-->
+            <form action="" method="POST">
+                <label>Name:</label>
+                    <input type="text" placeholder="Please enter your name here">
+                <label>Email:</label>
+                    <input type="text" id="Email" name="Email" placeholder="Please enetr your email here">
+                <label>Message:</label>
+                    <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                    <input type="submit" value="SUBMIT">
+            </form>
+        </div>
+    </div>
+
+    <!--Footer sectopn-->
+    <footer>
+        <p>
+            <p class="center">&copy; 2025 Dimitrina Tancheva. All rights reserved.</p>
+            <br>
+        </p>
+    </footer>
+
+    
+</body>
+</html>
