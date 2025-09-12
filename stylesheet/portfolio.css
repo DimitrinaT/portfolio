@@ -10,10 +10,10 @@ h1 {
     font-family: 'Josefin Sans', sans-serif;
     text-align: center;
     margin-top: 3%;
-    color: #1a1a1a;
+    color: #2c2c2c;
 }
 
-/* Heading 1 element hover effect */
+/* Heading 1 elements hover effect */
 h1:hover {
     filter: grayscale(5%);
     transform: scale(1.1);
@@ -53,23 +53,21 @@ p:hover {
     text-align: center;
 }
 
-/* Anchor elements */
+/* Links */
 a {
-    
-    color: #3498db;
+    color: #dd6e42;
     text-decoration: none;
     transition: all 0.3s ease;
     position: relative;
 }
 
 a:hover {
-    color: #2980b9;
+    color: #324a5f;
     text-decoration: underline;
 }
 
-/* Image elements */
+/* Images */
 img {
-    filter: grayscale(75%);
     border-radius: 8px;
     max-width: 100%;
     height: 340px;
@@ -92,10 +90,17 @@ img:hover {
     }
 }
 
-/* Footer element */
+/* Footer */
 footer {
     padding: 2%;
     background-color: white;
+    color: #2c2c2c;
+}
+
+/* Remove zoom effect for footer text */
+footer .center:hover {
+    transform: none;
+    transition: none;
 }
 
 /** End of general styling **/
@@ -103,41 +108,40 @@ footer {
 /** Navbar styling **/
 .navbar {
     overflow: hidden;
-    background-color: black;
+    background-color: #1b2a41;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;
-    -webkit-animation: moveNav 5s;
-    animation: moveNav 5s;
+    animation: moveNav 1s forwards; /* shorter duration for synchronized effect */
 }
 
-/* moveNav animation effect for moving the nav bar in from the left of the screen */
+/* Slide navbar in from top */
 @keyframes moveNav {
-    from {left: -100vw;} 
-    to {left: 0vw;}
+    from { top: -100px; } 
+    to { top: 0; }
 }
 
 /* Navbar links */
 .navbar a {
     float: left;
     display: block;
-    color: white;
+    color: #f2f2f2;;
     padding: 14px 16px;
     text-decoration: none;
     font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
     font-size: 16px;
     font-weight: 500;
     text-align: center;
-    position: relative;
-    -webkit-animation: moveNavText 5.75s; 
-    animation: moveNavText 5.75s; 
+    opacity: 0; /* start invisible */
+    animation: moveNavText 1s forwards;
+    animation-delay: 1s; /* start after navbar slides in */
 }
 
-/* moveNavText animation effect for moving the navbar text from above the view to the navbar */
+/* Fade/slide links into navbar */
 @keyframes moveNavText {
-    from {top: -100vw;} 
-    to {top: 0vw;} 
+    from { top: -50px; opacity: 0; }
+    to { top: 0; opacity: 1; }
 }
 
 /* Screens 576px and smaller will display navbar links equally distributed */
@@ -150,19 +154,20 @@ footer {
 
 /* Navbar hover effects */
 .navbar a:hover {
-    background-color: #f4f4f4; 
-    color: black;
+    background-color: #ccc9dc; 
+    color: #324a5f;
     font-weight: bold; 
 }
 
 /* Navbar home button */
 .navbar a.active { 
-    background-color: darkgray;
+    background-color: #dd6e42;
+    color: #fff;
 }
 /** End of Navbar styling **/
 
 /** Video styling **/
-/* Formating for background video **/
+/* Background video **/
 #Typing_Video {
     position: fixed;
     right: 0;
@@ -180,19 +185,20 @@ footer {
 
 /* Text over the video */
 .Video_Text {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3);
     color: white;
     width: 100%;
     padding: 20px;
     position: relative;
-    -webkit-animation: moveVideoText 5.75s;
-    animation: moveVideoText 5.75s;
+    opacity: 0;
+    animation: moveVideoText 1s forwards;
+    animation-delay: 2s; /* start after links appear */
 }
 
-/* This animation effect causes the overlay video text to move up from the bottom of the page upon page load */
+/* Fade/slide video text up */
 @keyframes moveVideoText {
-    from {top: -100vw;} 
-    to {top: 0vw;} 
+    from { top: 20px; opacity: 0; }
+    to { top: 0; opacity: 1; }
 }
 
 /** End of video styling **/
@@ -208,7 +214,7 @@ footer {
     padding: 10px;
     padding-top: 3%;
     height: 400px;
-    background-color: #f2f2f2;
+    background-color: #ccc9dc;
 }
 
 /* Screens 576px and smaller will display a scroll bar if the text overflows the column height */
@@ -224,7 +230,7 @@ footer {
     padding: 10px;
     padding-top: 1.9%;
     height: 400px;
-    background-color: #4d4d4d;
+    background-color: #324a5f;
 }
 
 .Column_tall {
@@ -232,11 +238,18 @@ footer {
     height: 450px;
 }
 
-/* This inserts something after the content of selected elements (in this case the elements with class "Row") */
+/* Clear floats in Row */
 .Row:after {
 	content: ""; 
 	display: table; 
 	clear: both; 
+}
+
+/* Disable hover effect for the About/GitHub text */
+#About p:hover,
+#GitHub p:hover {
+    transform: none !important;
+    transition: none !important;
 }
 
 /** End of Table styling **/
@@ -261,8 +274,8 @@ input[type=text]:hover {
 
 /* Submit button */
 input[type=submit] {
-    background-color: black;
-    color: white;
+    background-color: #324a5f;
+    color: #fff;
     font-weight: bold;
     padding: 12px 20px;
     border: none;
@@ -276,9 +289,9 @@ input[type=submit] {
 
 /* Hover effect for submit button */
 input[type=submit]:hover {
-    background-color: white;
-    color: black; 
-    transform: scale(1.5); 
+    background-color: #dd6e42;
+    color: #fff; 
+    transform: scale(1.05); 
     transition: transform 1.5s; 
 }
 
@@ -290,4 +303,4 @@ form {
     font-family: "Trebuchet MS", Optima;
 }
 
-/** End of contact form styling **/
+/** End of contact Form styling **/
