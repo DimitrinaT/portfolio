@@ -600,4 +600,26 @@ button:hover, .form-container .btn:hover {
         margin-top: 0;
     }
 }
+
+/* MOBILE FIX */
+@media screen and (max-width: 768px) {
+    .Column_1, .Column_2 {
+        width: 100% !important;
+        height: auto !important;
+        float: none;
+    }
+    
+    #Slideshow_Container {
+        width: 90vw !important;
+    }
+    
+    .Video_Text p {
+        font-size: 18px !important;
+    }
+    
+    .Navbar a {
+        font-size: 16px !important;
+        padding: 15px !important;
+    }
+}
 /***** End of Media Query Section *****/
