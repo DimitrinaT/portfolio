@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>Dimitrina</title>
-    <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
+    <title>Dimitrina Tancheva Portfolio</title>
+    <link rel="shortcut icon" type="img/jpg" href="images/coding_icon.png">
     <link rel="stylesheet" type="text/css" href="stylesheet/portfolio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 
 <!--Body-->
 <body class="Background">
 
     <!--Navbar-->
-    <div class="navbar">
+    <div class="Navbar">
         <a class="active" href="#Home">Home</a>
         <a href="#Slideshow">Slideshow</a>
         <a href="#About">About</a>
         <a href="#GitHub">GitHub</a>
-        <a onclick="openForm()" ondbclick="closeForm()" class="contact">Contact</a>
+        <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
     </div>
 
     <!--Background video-->
@@ -36,8 +38,10 @@
             <p class="center">
                Stay calm, keep your mind clear, and let the code take shape — one elegant solution at a time.
                <br>
-               <br> Hello, I am Dimitrina, and welcome to my portfolio. Here, you will find the skills I am learning and the projects I am experimenting with as I grow in my coding journey.
+               <br> Hello, I am Dimitrina, and welcome to my portfolio. Here, you will find the skills I am 
                <br> 
+               <br> learning and the projects I am experimenting with as I grow in my coding journey.
+               <br>
                <br>Thank you for stopping by — I am excited to share my work with you!
             </p>
         </strong>
@@ -45,16 +49,16 @@
 
     <!--Slideshow section added-->
 <div id="Slideshow">
-    <div is="Slideshow_Background">
+    <div id="Slideshow_Background">
         <div id="Slideshow_Container">
             <!--Slide 1 of 6-->
             <div class="mySlides fade">
-                <img class="Slideshow_Images" src="images/HTML_CSS_and_JavaScript.jpeg" alt="HTML, CSS, and JS logos">
+                <img class="Slideshow_Images" src="images/Dimitrina.jpg" alt="Image of Dimitrina Tancheva">
                 <div></div>
             </div>
             <!--Slide 2 of 6-->
             <div class="mySlides fade">
-                <img class="Slideshow_Images" src="images/Square Personal Photo.png" alt="Picture of yourself">
+                <img class="Slideshow_Images" src="images/HTML_CSS_and_JavaScript.jpeg" alt="HTML, CSS, and JS logos">
                 <div></div>
             </div>
             <!--Slide 3 of 6-->
@@ -64,7 +68,7 @@
             </div>
             <!--Slide 4 of 6-->
             <div class="mySlides fade">
-                <img class="Slideshow_Images" src="images/C_Sharp_and_Dot_NET.png" alt="C# logo">
+                <img class="Slideshow_Images" src="images/csharp.png" alt="C# logo">
                 <div></div>
             </div>
             <!--Slide 5 of 6-->
@@ -74,7 +78,7 @@
             </div>
             <!--Slide 6 of 6-->
             <div class="mySlides fade">
-                <img class="Slideshow_Images" src="images/Square Custom Picture.png" alt="Replace with a picture of your choosing">
+                <img class="Slideshow_Images" src="images/code.jpg" alt="Code editor showing programming work">
                 <div></div>
             </div>
             <!--Previous and next buttons-->
@@ -84,7 +88,7 @@
         <br>
 
         <!--Slideshow dots-->
-        <div>
+        <div style="text-align: center">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
@@ -99,13 +103,13 @@
     <div class="Row" id="About">
         <!--Left colum-->
         <div class="Column_2">
-            <img src="images/Dimitrina.jpg" alt="">
+            <img src="images/computer.jpg" alt="Image of a computer">
         </div>
         <!--Right column-->
         <div class="Column_1">
-            <h1>About</h1>
+            <h2>About</h2>
             <p>
-                I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, where I trained in web development languages such as HTML, CSS and JavaScript.
+                I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, where I trained in web development languages such as HTML, CSS, JavaScript, SQL, Python and C#.
                 <br>
                 <br> I enjoy exploring both front-end and back-end development and experimenting with new challenges in coding. 
                 <br>
@@ -118,7 +122,7 @@
     <div class="Row" id="GitHub">
         <!--Left column-->
         <div class="Column_1">
-            <h1>GitHub</h1>
+            <h2>GitHub</h2>
             <p class="center">
                 See the projects I have been working on by visiting my GitHub here:
             </p>
@@ -139,8 +143,8 @@
     <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
     <div class="form-popup" id="myForm">
         <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet-->
-        <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container">
-            <h1>Contact</h1>
+        <form action="https://formspree.io/f/mrblovrj" method="POST" class="form-container">
+            <h2>Contact</h2>
             <label for="name"><b>Name</b></label>
                 <input type="text" placeholder="Type your name here" name="name" required>
             <label for="phone" ><b>Phone</b></label>
@@ -164,6 +168,6 @@
         </p>
     </footer>
 
-    <sript></sript>
+    <script src="JS/portfolio.js"></script>
 </body>
 </html>
